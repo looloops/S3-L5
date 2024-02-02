@@ -327,6 +327,9 @@ function deleteProp(obj, prop) {
   delete obj[prop];
   return obj;
 }
+deleteProp(me, "surname");
+console.log("---Es 11---");
+console.log(me);
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
@@ -334,12 +337,14 @@ function deleteProp(obj, prop) {
 function newestMovie(movies) {
   let newest = movies[0];
   for (let i = 1; i < movies.length; i++) {
-    if (movies[i].year > newest.year) {
+    if (movies[i].Year > newest.Year) {
       newest = movies[i];
     }
   }
   return newest;
 }
+console.log("---Es 12---");
+console.log("The most recent movie is: " + newestMovie(movies).Title);
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
@@ -442,7 +447,6 @@ const selectContainer = function () {
   const container = document.getElementById("container");
   return container;
 };
-console.log(selectContainer());
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
