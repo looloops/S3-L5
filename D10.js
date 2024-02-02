@@ -323,12 +323,23 @@ console.log(isTodayMyBirthday("1990-11-25"));
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
-console.log("---ES 11--- da fare");
+function deleteProp(obj, prop) {
+  delete obj[prop];
+  return obj;
+}
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
-console.log("---ES 12--- da fare");
+function newestMovie(movies) {
+  let newest = movies[0];
+  for (let i = 1; i < movies.length; i++) {
+    if (movies[i].year > newest.year) {
+      newest = movies[i];
+    }
+  }
+  return newest;
+}
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
